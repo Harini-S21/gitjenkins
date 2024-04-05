@@ -9,13 +9,13 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh 'javac Helloworld.java'
+                sh 'javac Jenkins.java'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'java Helloworld'
+                sh 'java Jenkins'
             }
         }
     }
