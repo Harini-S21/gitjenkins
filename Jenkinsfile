@@ -1,14 +1,21 @@
 pipeline {
     agent any
 
+    tools {
+        jdk 'JDK11'
+        git 'Default'
+    }
+
     stages {
-        stage('Build') {
+        stage('Compile') {
             steps {
-                sh 'javac Jenkins.java'
+                sh 'javac Helloworld.java'
             }
         }
+
         stage('Run') {
-                sh 'java Jenkins'
+            steps {
+                sh 'java Helloworld'
             }
         }
     }
